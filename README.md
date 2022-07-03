@@ -31,7 +31,8 @@ QQ.dt.ms.mul 100 > hundred-milliseconds
 QQ.dt.month.mul 2 > two-months
 ```
 
-To print it in ISO 8601 format:
+To print it in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+using [strftime](https://man7.org/linux/man-pages/man3/strftime.3.html):
 
 ```
 QQ.io.stdout
@@ -42,7 +43,8 @@ QQ.io.stdout
       t
 ```
 
-To parse ISO 8601 back to time:
+To parse [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) back to time
+using [strptime](https://man7.org/linux/man-pages/man3/strptime.3.html):
 
 ```
 QQ.dt.strptime > t
