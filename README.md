@@ -62,7 +62,7 @@ The object `QQ.dt.time` has the following attributes:
   * `lt` if less than
   * `lte` if less than or equal
 
-For example, to add give hours and thirty minutes to current time and then compare it with the time of file creation:
+For example, to add five hours and thirty minutes to the current time and then compare it with the time of file creation:
 
 ```
 QQ.io.stdout
