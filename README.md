@@ -1,12 +1,12 @@
 <img src="https://www.yegor256.com/images/books/elegant-objects/cactus.svg" height="100px" />
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
-[![DevOps By Rultor.com](http://www.rultor.com/b/objectionary/eo-files)](http://www.rultor.com/p/objectionary/eo-files)
+[![DevOps By Rultor.com](http://www.rultor.com/b/objectionary/eo-time)](http://www.rultor.com/p/objectionary/eo-time)
 [![We recommend IntelliJ IDEA](https://www.elegantobjects.org/intellij-idea.svg)](https://www.jetbrains.com/idea/)
 
-[![Hits-of-Code](https://hitsofcode.com/github/objectionary/eo-files)](https://hitsofcode.com/view/github/objectionary/eo-files)
-![Lines of code](https://img.shields.io/tokei/lines/github/objectionary/eo-files)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/objectionary/eo-files/blob/master/LICENSE.txt)
+[![Hits-of-Code](https://hitsofcode.com/github/objectionary/eo-time)](https://hitsofcode.com/view/github/objectionary/eo-time)
+![Lines of code](https://img.shields.io/tokei/lines/github/objectionary/eo-time)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/objectionary/eo-time/blob/master/LICENSE.txt)
 
 [EO](https://www.eolang.org) objects for date/time manipulations.
 
