@@ -26,9 +26,14 @@ QQ.dt.time > t
 To make short time interval:
 
 ```
+QQ.dt.nanosecond.mul 10 > ten-ns
+QQ.dt.microsecond.mul 50 > fifty-mcs
+QQ.dt.millisecond.mul 100 > hundred-ms
+QQ.dt.second.mul 3 > three-seconds
+QQ.dt.minute.mul 4 > four-minutes
 QQ.dt.hour.mul 5 > five-hours
-QQ.dt.ms.mul 100 > hundred-milliseconds
-QQ.dt.month.mul 2 > two-months
+QQ.dt.day > one-day
+QQ.dt.week.mul 2 > two-weeks
 ```
 
 To print it in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
@@ -77,6 +82,16 @@ QQ.io.stdout
           "test.txt"
     "The file is too old"
     "The file is fresh"
+```
+
+There are two objects that are aware of calendar specifics and must be
+used on the left side of the equation in order to respect the calendar. The following
+code will move current time three months ahead:
+
+```
+plus
+  QQ.dt.month.mul 3
+  QQ.dt.now
 ```
 
 ## How to Contribute
