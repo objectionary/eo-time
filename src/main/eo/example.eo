@@ -1,0 +1,23 @@
+[] > example
+  stdout > @
+    seq > @
+      "Current time: "
+      time.current
+      as-string "yyyy-MM-dd HH:mm:ss"
+
+[] > date-arithmetic-example
+  stdout > @
+    seq > @
+      "One hour from now: "
+      time.current
+      plus (time.duration.seconds 3600)
+      as-string "HH:mm:ss"
+
+[] > date-comparison-example
+  stdout > @
+    seq > @
+      time.current
+      after (time.datetime 0)
+      if. > @
+        "Current time is after epoch"
+        "Current time is before epoch"

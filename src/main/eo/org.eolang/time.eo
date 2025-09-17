@@ -1,0 +1,117 @@
+# This is the main time object that provides access to all time-related functionality
+[] > time
+  # Returns current timestamp
+  [] > current
+    rt > @
+      org.eolang.time.datetime
+      now
+
+  # Creates a datetime object from milliseconds since epoch
+  [millis] > datetime
+    millis > value
+    
+    # Returns the epoch value
+    [] > epoch
+      value > @
+    
+    # Formats the datetime using a pattern
+    [pattern] > as-string
+      rt > @
+        org.eolang.time.datetime
+        format
+        value
+        pattern
+    
+    # Compares with another datetime for equality
+    [other] > eq
+      value.eq other.value > @
+    
+    # Checks if this datetime is after another
+    [other] > after
+      value.gt other.value > @
+    
+    # Checks if this datetime is before another
+    [other] > before
+      value.lt other.value > @
+    
+    # Adds a duration to this datetime
+    [duration] > plus
+      time.datetime (value.plus duration.millis) > @
+    
+    # Subtracts a duration from this datetime
+    [duration] > minus
+      time.datetime (value.minus duration.millis) > @
+    
+    # Calculates difference between two datetimes
+    [other] > diff
+      time.duration (value.minus other.value) > @
+
+  # Duration object representing a time span
+  [] > duration
+    # Creates duration from milliseconds
+    [millis] > millis
+      millis > @
+    
+    # Creates duration from seconds
+    [seconds] > seconds
+      seconds.mul 1000 > @
+    
+    # Creates duration from minutes
+    [minutes] > minutes
+      seconds (minutes.mul 60) > @
+    
+    # Creates duration from hours
+    [hours] > hours
+      minutes (hours.mul 60) > @
+    
+    # Creates duration from days
+    [days] > days
+      hours (days.mul 24) > @
+    
+    # Returns duration in milliseconds
+    [] > in-millis
+      > @
+    
+    # Returns duration in seconds
+    [] > in-seconds
+      div-by 1000 > @
+    
+    # Returns duration in minutes
+    [] > in-minutes
+      div-by 60000 > @
+    
+    # Returns duration in hours
+    [] > in-hours
+      div-by 3600000 > @
+    
+    # Returns duration in days
+    [] > in-days
+      div-by 86400000 > @
+
+  # Additional utility functions
+  [] > utils
+    # Parses a string into datetime using a pattern
+    [string pattern] > parse
+      rt > @
+        org.eolang.time.datetime
+        parse
+        string
+        pattern
+    
+    # Returns current year
+    [] > current-year
+      rt > @
+        org.eolang.time.datetime
+        current-year
+    
+    # Returns current month
+    [] > current-month
+      rt > @
+        org.eolang.time.datetime
+        current-month
+    
+    # Returns current day of month
+    [] > current-day
+      rt > @
+        org.eolang.time.datetime
+        current-day
