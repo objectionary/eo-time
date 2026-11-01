@@ -1,0 +1,7 @@
++package org.eolang.time
++home https://github.com/objectionary/eo-time
++version 0.0.0
+
+# Represents an immutable instant as nanoseconds elapsed since the Unix epoch.
+[nanoseconds] > instant
+  nanoseconds > @
