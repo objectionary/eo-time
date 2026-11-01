@@ -10,9 +10,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <eo.version>0.29.0</eo.version>
+        <eo.version>0.58.3</eo.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.eolang</groupId>
@@ -26,7 +25,7 @@
             <plugin>
                 <groupId>org.eolang</groupId>
                 <artifactId>eo-maven-plugin</artifactId>
-                <version>0.58.3</version>
+                <version>${eo.version}</version>
                 <executions>
                     <execution>
                         <goals>
