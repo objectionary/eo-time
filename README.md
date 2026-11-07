@@ -20,8 +20,11 @@ To make time from absolute value in **nano-seconds** after Epoch:
 
 ```
 QQ.dt.time > t
-  1656855443000000
+  1656855443000000000
 ```
+
+This value represents July 3, 2022 at 13:37:23 UTC
+(`2022-07-03T13:37:23Z`).
 
 To make short time interval:
 
