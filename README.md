@@ -67,19 +67,22 @@ The object `QQ.dt.time` has the following attributes:
   * `lt` if less than
   * `lte` if less than or equal
 
-For example, to add five hours and thirty minutes to the current time and then compare it with the time of file creation:
+For example, to check whether a file is more than five hours and thirty minutes old,
+compare the current time with the file creation time plus that interval. A file
+exactly five hours and thirty minutes old is still considered fresh:
 
 ```
 QQ.io.stdout
   if.
     gt.
+      QQ.dt.now
       plus.
-        QQ.dt.now
-        QQ.dt.hour.mul 5
+        plus.
+          utime.
+            QQ.fs.file
+              "test.txt"
+          QQ.dt.hour.mul 5
         QQ.dt.minute.mul 30
-      utime.
-        QQ.fs.file
-          "test.txt"
     "The file is too old"
     "The file is fresh"
 ```
