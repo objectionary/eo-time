@@ -1,0 +1,6 @@
++package org.eolang
++home https://github.com/objectionary/eo-time
++version 0.0.0
+
+# This is the main time object that provides access to all time-related functionality
+[] > time
